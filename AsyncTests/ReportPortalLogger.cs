@@ -5,7 +5,6 @@ using ReportPortal.Client.Abstractions.Requests;
 using ReportPortal.Client.Abstractions.Models;
 using ReportPortal.NUnitExtension.EventArguments;
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using ReportPortal.Shared.Reporter;
@@ -73,7 +72,7 @@ namespace AsyncTests
 
 			payload.TestUuid = testInfo.Uuid;
 
-			// TODO HTTP POST
+			new HttpClient().Post(Configuration.ReportingUrl, payload);
 		}
 
 		private TestItemResponse GetTestInfo(TestItemFinishedEventArgs e)

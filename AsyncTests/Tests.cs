@@ -13,7 +13,7 @@ namespace AsyncTests
 			var payload = new CalculationServiceRequest();
 			payload.Argument1 = arg1;
 			payload.Argument2 = arg2;
-			payload.CallbackUrl = "localhost";
+			payload.CallbackUrl = Configuration.CallbackUrl;
 
 			var service = new CalculationService();
 			var response = service.Sum(payload);
