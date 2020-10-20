@@ -13,8 +13,8 @@ namespace AsyncTests
 
 			var request = (HttpWebRequest) WebRequest.Create(url);
 			request.Method = "POST";
-			request.ContentType = "appliction/json";
-			request.Accept = "appliction/json";
+			request.ContentType = "application/json";
+			request.Accept = "application/json";
 			request.ContentLength = content.Length;
 
 			using (var stream = request.GetRequestStream())
