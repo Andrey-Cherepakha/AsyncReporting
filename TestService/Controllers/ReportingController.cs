@@ -16,11 +16,14 @@ namespace TestService.Controllers
 			_logger = logger;
 		}
 
-		// GET: api/<ReportingController>
+		// GET: api/Reporting
 		[HttpGet]
-		public void Get() {}
+		public string Get() 
+		{
+			return "Reporting Controller is up";
+		}
 
-		// POST api/<ReportingController>
+		// POST: api/Reporting
 		[HttpPost]
 		public void Post(ReportingRequest payload)
 		{

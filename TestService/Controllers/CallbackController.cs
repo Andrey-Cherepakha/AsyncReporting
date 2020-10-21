@@ -15,14 +15,17 @@ namespace TestService.Controllers
 		public CallbackController(ILogger<CallbackController> logger)
 		{
 			_logger = logger;
-			_reportPortal = new ReportPortalUtil();
+			//_reportPortal = new ReportPortalUtil();
 		}
 
-		// GET: api/<ReportingController>
+		// GET: api/Callback
 		[HttpGet]
-		public void Get() { }
+		public string Get() 
+		{
+			return "Callback Controller is up";
+		}
 
-		// POST api/<ReportingController>
+		// POST: api/Callback
 		[HttpPost]
 		public void Post(CallbackRequest payload)
 		{
